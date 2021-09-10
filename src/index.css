@@ -1,13 +1,27 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background-color: slategray;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+main {
+  margin: 0 auto;
+  max-width: 80%;
+  display: grid;
+  grid-template-areas: "basic extra";
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+#basic-info {
+  grid-area: basic;
+}
+
+#extra-info {
+  grid-area: extra;
+}
+
+/* Utility class to center items on the page */
+.center-me {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
