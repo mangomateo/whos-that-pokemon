@@ -1,13 +1,10 @@
-import React from "react";
+import Searchbar from "./Searchbar";
 
 const Header = () => {
     return (
-        <header class="center-me">
-            <h1>Who's that Pokemon?</h1>
-            <section>
-                <input type="text" placeholder="Enter Pokemon name or ID..." />
-                <input type="button" value="Search" />
-            </section>
+        <header className="center-me">
+            <h1 className="title-font">Who's that Pokemon?</h1>
+            <Searchbar />
         </header>
     );
 }

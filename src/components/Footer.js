@@ -1,8 +1,7 @@
-import React from "react";
 
 const Footer = () => {
     return (
-        <footer class="center-me"> 
+        <footer className="center-me"> 
             <h6>Matt codes on coffee</h6>
         </footer>
     );

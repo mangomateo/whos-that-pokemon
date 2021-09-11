@@ -1,10 +1,14 @@
 body {
-  background-color: slategray;
+  /* gradient snippet from cssgradient.io */
+  background-color: #8BC6EC;
+  background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+  font-family: 'Exo 2', sans-serif;
 }
 
 main {
   margin: 0 auto;
-  max-width: 80%;
+  margin-top: 3em;
+  max-width: 70%;
   display: grid;
   grid-template-areas: "basic extra";
   grid-template-columns: 1fr 1fr;
@@ -17,6 +21,9 @@ main {
 
 #extra-info {
   grid-area: extra;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 
 /* Utility class to center items on the page */
@@ -24,4 +31,38 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.title-font {
+  font-size: 5em;
+  /* Font taken from Google Fonts */
+  font-family: 'Luckiest Guy', cursive;
+}
+
+#searchbar {
+  border: none;
+  padding: 1em;
+  border-radius: .5em;
+  width: 300px;
+}
+
+#button {
+  padding: 1em;
+  border-radius: 1em;
+  border: none;
+  width: 100px;
+  margin-left: 1em;
+}
+
+#pokemon-data {
+  display: flex;
+
+}
+
+#dex-num {
+  margin-right: .5em;
+}
+
+#dex-name {
+  margin-left: .5em;
 }
