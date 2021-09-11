@@ -1,9 +1,9 @@
 
-const PokedexData = () => {
+const PokedexData = (props) => {
     return (
         <div id="pokemon-data">
-            <h2 id="dex-num">#001</h2>
-            <h2 id="dex-name">Bulbasaur</h2>
+            <h2 id="dex-num">{props.pokedexNum}</h2>
+            <h2 id="dex-name">{props.name}</h2>
         </div>
     );
 }

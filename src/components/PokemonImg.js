@@ -1,8 +1,8 @@
 
-const PokemonImg = () => {
+const PokemonImg = (props) => {
     return (
         <div id="pokemon-image">
-            <img src="https://via.placeholder.com/200" alt="Test" />
+            <img src={props.image} alt="Test" />
         </div>
 );
 }

@@ -1,11 +1,11 @@
 import PokedexData from "./PokedexData";
 import PokemonImg from "./PokemonImg";
 
-const BasicInfo = () => {
+const BasicInfo = (props) => {
     return (
         <section id="basic-info" className="center-me">
-            <PokedexData />
-            <PokemonImg />
+            <PokedexData pokedexNum={props.pokedexNum} name={props.name} />
+            <PokemonImg image={props.image} />
         </section>
     );
 }

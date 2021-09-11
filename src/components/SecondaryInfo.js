@@ -1,10 +1,10 @@
 
-const SecondaryInfo = () => {
+const SecondaryInfo = (props) => {
     return (
         <div id="info-2">
-            <p>Abilities: ***</p>
-            <p>Height: ###</p>
-            <p>Weight: ###</p>
+            <p>Abilities: {props.ability}</p>
+            <p>Height: {props.height}</p>
+            <p>Weight: {props.weight}</p>
         </div>
     );
 }

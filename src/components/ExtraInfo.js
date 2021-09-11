@@ -1,11 +1,18 @@
 import PrimaryInfo from "./PrimaryInfo";
 import SecondaryInfo from "./SecondaryInfo";
 
-const ExtraInfo = () => {
+const ExtraInfo = (props) => {
     return (
         <section id="extra-info" className="center-me">
-            <PrimaryInfo />
-            <SecondaryInfo />
+            <PrimaryInfo 
+                baseExp={props.baseExp}
+                type={props.type}
+            />
+            <SecondaryInfo 
+                ability={props.ability}
+                height={props.height}
+                weight={props.weight}
+            />
         </section>
     );
 }
