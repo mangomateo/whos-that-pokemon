@@ -1,5 +1,5 @@
 
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
 import Header from './components/Header';
@@ -17,10 +17,11 @@ function App() {
   const [height, setHeight] = useState([]);
   const [weight, setWeight] = useState([]);
   const [image, setImage] = useState([]);
+  const [query, setQuery] = useState('dragonite');
 
   // useEffect() to fetch data and update state
   useEffect(() => {
-    axios.get(`https://pokeapi.co/api/v2/pokemon/charizard/`)
+    axios.get(`https://pokeapi.co/api/v2/pokemon/${query}/`)
       .then(res => {
         setName(res.data.name);
         setPokedexNum(res.data.id);

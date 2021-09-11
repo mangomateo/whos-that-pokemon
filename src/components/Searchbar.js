@@ -1,9 +1,10 @@
 
 const Searchbar = () => {
+
     return (
         <section>
             <input type="text" placeholder="Enter Pokemon name or ID..." id="searchbar" />
-            <input type="button" value="Search" id="button" />
+            <button type="button" id="button" >Search</button>
         </section>
     );
 }
