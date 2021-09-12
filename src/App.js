@@ -17,7 +17,7 @@ function App() {
   const [height, setHeight] = useState([]);
   const [weight, setWeight] = useState([]);
   const [image, setImage] = useState([]);
-  const [query, setQuery] = useState('dragonite');
+  const [query, setQuery] = useState('muk');
 
   // useEffect() to fetch data and update state
   useEffect(() => {
@@ -33,11 +33,11 @@ function App() {
         setImage(res.data.sprites.front_default);
       })
       .catch(err => console.error(err));
-  }, [])
+  }, [query])
 
   return (
     <div>
-      <Header />
+      <Header setQuery={setQuery}/>
       <Main 
         name={name}
         pokedexNum={pokedexNum}
