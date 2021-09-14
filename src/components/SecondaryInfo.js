@@ -2,9 +2,8 @@
 const SecondaryInfo = (props) => {
     return (
         <div id="info-2">
+            <p>Type: {props.type}</p>
             <p>Abilities: {props.ability}</p>
-            <p>Height: {props.height}</p>
-            <p>Weight: {props.weight}</p>
         </div>
     );
 }

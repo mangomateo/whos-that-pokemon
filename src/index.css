@@ -1,36 +1,22 @@
+
+/* fix to make gradient stretch to fill screen (1 of 2)
+   link: https://bit.ly/3hydl0Z */
+html {
+  height: 100%;
+}
+
 body {
   /* gradient snippet from cssgradient.io */
   background-color: #8BC6EC;
   background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
   font-family: 'Exo 2', sans-serif;
-}
-
-main {
-  margin: 0 auto;
-  margin-top: 3em;
-  max-width: 70%;
-  display: grid;
-  grid-template-areas: "basic extra";
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-}
-
-#basic-info {
-  grid-area: basic;
-}
-
-#extra-info {
-  grid-area: extra;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-}
-
-/* Utility class to center items on the page */
-.center-me {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  
+  /* fix to make gradient stretch to fill screen (2 of 2)
+   link: https://bit.ly/3hydl0Z */
+  height: 100%;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .title-font {
@@ -52,17 +38,4 @@ main {
   border: none;
   width: 100px;
   margin-left: 1em;
-}
-
-#pokemon-data {
-  display: flex;
-
-}
-
-#dex-num {
-  margin-right: .5em;
-}
-
-#dex-name {
-  margin-left: .5em;
 }

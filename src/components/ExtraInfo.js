@@ -3,15 +3,15 @@ import SecondaryInfo from "./SecondaryInfo";
 
 const ExtraInfo = (props) => {
     return (
-        <section id="extra-info" className="center-me">
+        <section id="extra-info" className="d-flex justify-content-evenly">
             <PrimaryInfo 
                 baseExp={props.baseExp}
-                type={props.type}
+                height={props.height}
+                weight={props.weight}
             />
             <SecondaryInfo 
                 ability={props.ability}
-                height={props.height}
-                weight={props.weight}
+                type={props.type}
             />
         </section>
     );

@@ -1,9 +1,16 @@
 
+import Row from 'react-bootstrap/Row';
+
 const Footer = () => {
     return (
-        <footer className="center-me"> 
-            <h6>Matt codes on coffee</h6>
-        </footer>
+
+        // TODO: import emojis or flaticons in footer
+
+        <Row>
+            <footer className="text-center"> 
+                <h6>Matt codes on coffee</h6>
+            </footer>
+        </Row>
     );
 }
 
