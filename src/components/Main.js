@@ -1,31 +1,36 @@
 
-import BasicInfo from './BasicInfo';
-import ExtraInfo from './ExtraInfo';
 import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+import Card from 'react-bootstrap/Card'
+
 
 // TODO: show 'no results found' message on failed queries
 // TODO: show no results on page load
 
 const Main = (props) => {
+    
     return (
         <Row>
-            <Col>
-                <BasicInfo 
-                    name={props.name} 
-                    pokedexNum={props.pokedexNum}
-                    image={props.image}
-                />
-            </Col>
-            <Col>
-                <ExtraInfo 
-                    baseExp={props.baseExp}
-                    type={props.type}
-                    ability={props.ability}
-                    height={props.height}
-                    weight={props.weight}
-                />
-            </Col>
+            <Card style={{ width: '18rem' }} className="mx-auto">
+                <Card.Img variant="top" src={props.image} />
+                <Card.Body className="text-center">
+                    <Card.Title>
+                        #{props.pokedexNum} &nbsp; <span className="text-capitalize">{props.name}</span>
+                    </Card.Title>
+                    <Card.Text>
+                        Type: <span className="text-capitalize">{props.type}</span>
+                    </Card.Text>
+                    <Card.Text>
+                        Ability: <span className="text-capitalize">{props.ability}</span>
+                    </Card.Text>
+                    <Card.Text>
+                        Base Exp: {props.baseExp}
+                    </Card.Text>
+                    <Card.Text> 
+                        Height: {props.height} &nbsp; || &nbsp;
+                        Weight: {props.weight}
+                    </Card.Text> 
+                </Card.Body>
+            </Card>
         </Row>
     );
 }

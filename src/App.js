@@ -19,7 +19,7 @@ function App() {
   const [height, setHeight] = useState([]);
   const [weight, setWeight] = useState([]);
   const [image, setImage] = useState([]);
-  const [query, setQuery] = useState('mewtwo');
+  const [query, setQuery] = useState('');
 
   // useEffect() to fetch data and update state
   useEffect(() => {
@@ -42,15 +42,15 @@ function App() {
       <Container>
         <Header setQuery={setQuery}/>
         <Main 
-            name={name}
-            pokedexNum={pokedexNum}
-            baseExp={baseExp}
-            type={type}
-            ability={ability}
-            height={height}
-            weight={weight}
-            image={image}
-          />
+          name={name}
+          pokedexNum={pokedexNum}
+          baseExp={baseExp}
+          type={type}
+          ability={ability}
+          height={height}
+          weight={weight}
+          image={image}
+        /> 
         <Footer />
       </Container>
     </div>
