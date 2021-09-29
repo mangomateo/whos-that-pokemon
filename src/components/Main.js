@@ -2,8 +2,6 @@
 import Row from 'react-bootstrap/Row';
 import Card from 'react-bootstrap/Card'
 
-
-// TODO: show 'no results found' message on failed queries
 // TODO: show no results on page load
 
 const Main = (props) => {

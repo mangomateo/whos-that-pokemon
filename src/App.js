@@ -20,10 +20,12 @@ function App() {
   const [weight, setWeight] = useState([]);
   const [image, setImage] = useState([]);
   const [query, setQuery] = useState('');
+  const [showResults, setShowResults] = useState('init'); 
 
   // useEffect() to fetch data and update state
   useEffect(() => {
-    axios.get(`https://pokeapi.co/api/v2/pokemon/${query}/`)
+    if (query) {
+      axios.get(`https://pokeapi.co/api/v2/pokemon/${query}`)
       .then(res => {
         setName(res.data.name);
         setPokedexNum(res.data.id);
@@ -33,24 +35,40 @@ function App() {
         setHeight(res.data.height);
         setWeight(res.data.weight);
         setImage(res.data.sprites.front_default);
+        setShowResults('success');
       })
-      .catch(err => console.error(err));
-  }, [query])
+      .catch(err => {
+        console.error(err);
+        setShowResults('fail');
+      });
+    }
+  }, [query]);
+
+  let mainData;
+
+  // Show search results only when the API returns a result, otherwise show error message
+
+  // ? why is this not working?? =(
+  // TODO: figure out how to fix this code 
+  if (showResults === 'init') {
+    mainData =  <h2 className="text-center">Search for a Pokemon above!</h2>;
+  }
+
+  if (showResults === 'success') {
+    mainData = <Main name={name} pokedexNum={pokedexNum} baseExp={baseExp} type={type} ability={ability} height={height} weight={weight} image={image} />;
+  } 
+  
+  if (showResults === 'fail') {
+    mainData = <h2 className="text-center">Try again =(</h2>; 
+  }
+    
+   
 
   return (
     <div>
       <Container>
         <Header setQuery={setQuery}/>
-        <Main 
-          name={name}
-          pokedexNum={pokedexNum}
-          baseExp={baseExp}
-          type={type}
-          ability={ability}
-          height={height}
-          weight={weight}
-          image={image}
-        /> 
+        {mainData}
         <Footer />
       </Container>
     </div>
