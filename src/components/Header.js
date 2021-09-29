@@ -19,8 +19,8 @@ const Header = props => {
             <header>
                 <h1 className="title-font">Who's that Pokemon?</h1>
                 <section className="my-5">
-                <input type="text" placeholder="Enter Pokemon name or ID..." id="searchbar" onChange={handleChange}/>
-                    <button type="submit" id="button" onClick={handleSubmit}>Search</button>
+                    <input type="text" placeholder="Enter Pokemon name or ID..." id="searchbar" onChange={handleChange}/>
+                    <button type="submit" id="button" onClick={handleSubmit}>Search</button>  
                 </section>
             </header>
         </Row>

@@ -47,9 +47,6 @@ function App() {
   let mainData;
 
   // Show search results only when the API returns a result, otherwise show error message
-
-  // ? why is this not working?? =(
-  // TODO: figure out how to fix this code 
   if (showResults === 'init') {
     mainData =  <h2 className="text-center">Search for a Pokemon above!</h2>;
   }
